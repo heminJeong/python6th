@@ -1,26 +1,49 @@
 
+var num = "20";
+num = num.toString();
+console.log(typeof num);
 
-var text = prompt("Enter your name: ");
-document.write('Your name : ' + text + "<br>");
+var number = 20;
+console.log(typeof number);
 
-var len = text.length;
-document.write("Number of characters : " + len + '<br>');
+number = number.toString();
+console.log(number, typeof number);
 
-document.write(text.charAt(2) + '<br>');
+var x = 2.56789;
+console.log(x.toFixed(1), typeof x.toFixed(1));
+console.log(x.toFixed(2), typeof x.toFixed(2));
 
-document.write(text.toUpperCase() + '<br>')
-document.write(text.toLowerCase() + '<br>')
+console.log(x.toPrecision(1), typeof x.toPrecision(1));
+console.log(x.toPrecision(2));
 
-var text1 = " hi";
-var text2 = "bye";
-var text3 = text1.concat(text2);
+console.log(Number(true));
+console.log(Number(false));
+console.log(Number("10"));
+console.log(Number(" 10 "));
+console.log(Number("10.25"));
 
-document.write(text3 + "<br>");
 
-
-var text4 = "hello";
-var result = text4.slice(0, 2);
-document.write(result + '<br>');
+//var text = prompt("Enter your name: ");
+//document.write('Your name : ' + text + "<br>");
+//
+//var len = text.length;
+//document.write("Number of characters : " + len + '<br>');
+//
+//document.write(text.charAt(2) + '<br>');
+//
+//document.write(text.toUpperCase() + '<br>')
+//document.write(text.toLowerCase() + '<br>')
+//
+//var text1 = " hi";
+//var text2 = "bye";
+//var text3 = text1.concat(text2);
+//
+//document.write(text3 + "<br>");
+//
+//
+//var text4 = "hello";
+//var result = text4.slice(0, 2);
+//document.write(result + '<br>');
 
 //var name = "이승훈";
 //var age = 29;
