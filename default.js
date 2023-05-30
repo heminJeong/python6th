@@ -1,40 +1,48 @@
 
-var num1 = parseInt(prompt("Enter first number : "));
-var num2 = parseInt(prompt("Enter second number : "));
-var lineBreak = "<br>";
+var base = parseFloat(prompt("밑변 입력 : "));
+var height = parseFloat(prompt("높이 입력 : "));
 
-var result = num1 + num2;
-document.write("the sum is : " + result + lineBreak);
+var area = base * height * 0.5;
 
-result = num1 - num2;
-document.write("the sub is : " + result + lineBreak);
+document.write("삼각형의 넓이 : " + area);
 
-result = num1 * num2;
-document.write("the multiplication is : " + result + lineBreak);
 
-result = num1 / num2;
-document.write("the division is : " + result + lineBreak);
+//var num1 = parseInt(prompt("Enter first number : "));
+//var num2 = parseInt(prompt("Enter second number : "));
+//var lineBreak = "<br>";
 
-result = num1 % num2;
-document.write('the remainer is : ' + result + lineBreak)
+//var result = num1 + num2;
+//document.write("the sum is : " + result + lineBreak);
+
+//result = num1 - num2;
+//document.write("the sub is : " + result + lineBreak);
+
+//result = num1 * num2;
+//document.write("the multiplication is : " + result + lineBreak);
+
+//result = num1 / num2;
+//document.write("the division is : " + result + lineBreak);
+
+//result = num1 % num2;
+//document.write('the remainer is : ' + result + lineBreak)
 
 //var num = "20";
 //num = num.toString();
 //console.log(typeof num);
-//
+
 //var number = 20;
 //console.log(typeof number);
-//
+
 //number = number.toString();
 //console.log(number, typeof number);
-//
+
 //var x = 2.56789;
 //console.log(x.toFixed(1), typeof x.toFixed(1));
 //console.log(x.toFixed(2), typeof x.toFixed(2));
-//
+
 //console.log(x.toPrecision(1), typeof x.toPrecision(1));
 //console.log(x.toPrecision(2));
-//
+
 //console.log(Number(true));
 //console.log(Number(false));
 //console.log(Number("10"));
@@ -44,15 +52,15 @@ document.write('the remainer is : ' + result + lineBreak)
 
 //var text = prompt("Enter your name: ");
 //document.write('Your name : ' + text + "<br>");
-//
+
 //var len = text.length;
 //document.write("Number of characters : " + len + '<br>');
-//
+
 //document.write(text.charAt(2) + '<br>');
-//
+
 //document.write(text.toUpperCase() + '<br>')
 //document.write(text.toLowerCase() + '<br>')
-//
+
 //var text1 = " hi";
 //var text2 = "bye";
 //var text3 = text1.concat(text2);
