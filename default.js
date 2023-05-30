@@ -24,7 +24,7 @@ document.write("삼각형의 넓이 : " + area);
 //document.write("the division is : " + result + lineBreak);
 
 //result = num1 % num2;
-//document.write('the remainer is : ' + result + lineBreak)
+//document.write('the remainer is : ' + result + lineBreak);
 
 //var num = "20";
 //num = num.toString();
@@ -64,10 +64,10 @@ document.write("삼각형의 넓이 : " + area);
 //var text1 = " hi";
 //var text2 = "bye";
 //var text3 = text1.concat(text2);
-//
+
 //document.write(text3 + "<br>");
-//
-//
+
+
 //var text4 = "hello";
 //var result = text4.slice(0, 2);
 //document.write(result + '<br>');
@@ -76,44 +76,38 @@ document.write("삼각형의 넓이 : " + area);
 //var age = 29;
 //var cgpa = 3.92;
 //var lineBreak = "<br/>";
-//
+
 //document.write("이름 : " + name + lineBreak);
 //document.write("나이 : " + age + lineBreak);
 //document.write("학점 : " + cgpa + lineBreak);
-//
-//
+
+
 //var lastName = '홍';
 //var firstName = '길동';
-//
+
 //var fullName = lastName + firstName;
-//
+
 //console.log(fullName);
 //console.log('Today is' + ' a ' + 'beautiful day');
 //console.log('My name is ' + fullName);
 
 
-
-//
 //console.log(123, typeof 123);
 //console.log(123.5,typeof 123.5);
 //console.log("123", typeof "123");
 //console.log(true, typeof true);
 //console.log(false, typeof false);
-//
-//
+
 //var car;
 //console.log(car);
 //var car = "";
 //console.log(car);
-//
+
 //var person = {firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue"};
 //console.log(person);
 //console.log(typeof person);
 //person = null;
 //console.log(typeof person);
-//
-//
-
 
 
 
