@@ -1,21 +1,42 @@
 
 
-
-for(var i=1;i<=100;i++){
-    if (i == 20){
-        break;
-    }
-    document.write(i + "<br>");
+function message(){
+    document.write("Hello I am a function without parameter" + "<br>");
 }
 
-document.write("===============<br>");
-
-for(var k=1;k<=100;k++){
-    if (k == 20){
-        continue;
-    }
-    document.write(k + "<br>");
+function welcomeMessage(name){
+    document.write("welcome " + name + "<br>");
 }
+
+function addition(num1, num2){
+    var sum = num1 + num2;
+    document.write("addition is " + sum + "<br>");
+}
+
+function square(num){
+    return num * num;
+}
+
+message();
+welcomeMessage("정해민");
+addition(2, 1);
+document.write("square of 5 is " + square(5) + "<br>");
+
+//for(var i=1;i<=100;i++){
+//    if (i == 20){
+//        break;
+//    }
+//    document.write(i + "<br>");
+//}
+//
+//document.write("===============<br>");
+//
+//for(var k=1;k<=100;k++){
+//    if (k == 20){
+//        continue;
+//    }
+//    document.write(k + "<br>");
+//}
 
 
 //var digit = parseInt(prompt('숫자 입력 : '));
@@ -45,7 +66,7 @@ for(var k=1;k<=100;k++){
 //        break;
 //    case 7:
 //        document.write('Seven');
-//        break;문
+//        break;
 //    case 8:
 //        document.write('Eight');
 //        break;
