@@ -1,38 +1,59 @@
 
 
-var names = new Array(20);
+var date = new Date();
+console.log(date);
 
-names[0] = "지훈";
-names[1] = "은영";
+var year = date.getFullYear();
+console.log(year);
 
-console.log(names[1]);
+var month = date.getMonth();
+console.log(month);
 
-var students = ["지훈", "은영", "수진", "준호"];
-console.log("students = " + students);
-console.log("2번 인덱스의 학생 : ", students[1]);
+var currentDate = date.getDate();
+console.log(currentDate);
 
+var currentDay = date.getDay();
+console.log(currentDay);
 
-console.log("학생 배열의 길이 : ", students.length);
+var currentHour = date.getHours();
+console.log(currentHour);
 
-students.push("해민");
-console.log("push 후 학생 배열 = ", students);
+var currentMinutes = date.getMinutes();
+console.log(currentMinutes);
 
-students.pop("해민");
-console.log("pop 후 학생 배열 = ", students);
-
-var numArray1 = [10, 20];
-var numArray2 = [30, 40, 50, 60];
-var numArray = numArray1.concat(numArray2);
-
-console.log("배열 잇기(concatnation) : " + numArray);
-console.log(numArray1 + numArray2);
+var currentSeconds = date.getSeconds();
+console.log(currentSeconds);
 
 
 
 
-
-
-
+//var names = new Array(20);
+//
+//names[0] = "지훈";
+//names[1] = "은영";
+//
+//console.log(names[1]);
+//
+//var students = ["지훈", "은영", "수진", "준호"];
+//console.log("students = " + students);
+//console.log("2번 인덱스의 학생 : ", students[1]);
+//
+//
+//console.log("학생 배열의 길이 : ", students.length);
+//
+//students.push("해민");
+//console.log("push 후 학생 배열 = ", students);
+//
+//students.pop("해민");
+//console.log("pop 후 학생 배열 = ", students);
+//
+//var numArray1 = [10, 20];
+//var numArray2 = [30, 40, 50, 60];
+//var numArray = numArray1.concat(numArray2);
+//
+//console.log("배열 잇기(concatnation) : " + numArray);
+//console.log(numArray1 + numArray2);
+//
 
 //(function display(message){
 //    console.log(message);
