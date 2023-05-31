@@ -1,26 +1,36 @@
 
 
-function message(){
-    document.write("Hello I am a function without parameter" + "<br>");
+(function display(message){
+    console.log(message);
+})('hi');
+
+var display2 = function displayMessage(msg){
+    console.log(msg);
+
 }
 
-function welcomeMessage(name){
-    document.write("welcome " + name + "<br>");
-}
 
-function addition(num1, num2){
-    var sum = num1 + num2;
-    document.write("addition is " + sum + "<br>");
-}
-
-function square(num){
-    return num * num;
-}
-
-message();
-welcomeMessage("정해민");
-addition(2, 1);
-document.write("square of 5 is " + square(5) + "<br>");
+//function message(){
+//    document.write("Hello I am a function without parameter" + "<br>");
+//}
+//
+//function welcomeMessage(name){
+//    document.write("welcome " + name + "<br>");
+//}
+//
+//function addition(num1, num2){
+//    var sum = num1 + num2;
+//    document.write("addition is " + sum + "<br>");
+//}
+//
+//function square(num){
+//    return num * num;
+//}
+//
+//message();
+//welcomeMessage("정해민");
+//addition(2, 1);
+//document.write("square of 5 is " + square(5) + "<br>");
 
 //for(var i=1;i<=100;i++){
 //    if (i == 20){
@@ -28,7 +38,7 @@ document.write("square of 5 is " + square(5) + "<br>");
 //    }
 //    document.write(i + "<br>");
 //}
-//
+//습
 //document.write("===============<br>");
 //
 //for(var k=1;k<=100;k++){
