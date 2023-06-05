@@ -1,9 +1,7 @@
-st1 = 'Welcome to 정해민'
-print("to" in st1)
+a = 10
+b = 10
 
-st2 = 'Welcome top 정해민'
-print("to" in st1)
+print(a is not b)
 
-st3 = 'Welcome to 정해민'
-print("subs" in st1)
-
+b = '10'
+print(a is not b)
