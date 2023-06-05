@@ -1,21 +1,13 @@
-a = 4
+a = 5
 b = 2
-total = a + b
-print("total = a + b: ", total)
+c = 3
+d = 200
 
+print('AND 연산자')
+print('a > b and a > c: ', a > b and a < c)
 
-total = a - b
-print("total = a - b: ", total)
+print('or 연산자')
+print('a > b or a > c: ', a > b or a > c)
 
-
-total = a * b
-print("a * b : ", total)
-
-total = a / b
-print("a / b : ", total)
-
-
-print("a ** b : ", a ** b )
-
-print("a // b : ", a // b)
-
+print('NOT 연산자')
+print('not(a < b) : ', not(a < b))
