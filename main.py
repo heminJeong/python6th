@@ -1,8 +1,9 @@
-a = 10
-b = 15
+st1 = 'Welcome to 정해민'
+print("to" in st1)
 
-print('a : ', a, bin(a))
-print('b : ', b, bin(b))
-print('~a = ', ~a, bin(~a))
-print('a << 2 : ', a << 2)
-print('a >> 2 : ', a >> 2)
+st2 = 'Welcome top 정해민'
+print("to" in st1)
+
+st3 = 'Welcome to 정해민'
+print("subs" in st1)
+
