@@ -1,13 +1,8 @@
-a = 5
-b = 2
-c = 3
-d = 200
+a = 10
+b = 15
 
-print('AND 연산자')
-print('a > b and a > c: ', a > b and a < c)
-
-print('or 연산자')
-print('a > b or a > c: ', a > b or a > c)
-
-print('NOT 연산자')
-print('not(a < b) : ', not(a < b))
+print('a : ', a, bin(a))
+print('b : ', b, bin(b))
+print('~a = ', ~a, bin(~a))
+print('a << 2 : ', a << 2)
+print('a >> 2 : ', a >> 2)
