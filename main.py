@@ -50,10 +50,51 @@
 #     print("멋쟁이 사자")
 # print("코드 종료")
 
+#
+#
+# a = 5
+# if a < 6:
+#     pass # 해민 개발
+# else:
+#     print("6 보다 큼")
 
+# 배열 생성 후 접근
+import array
 
-a = 5
-if a < 6:
-    pass # 해민 개발
-else:
-    print("6 보다 큼")
+# from array import *
+#
+# stu_roll = array('i', [101, 102, 103, 104, 105])
+# n = len(stu_roll)
+# i = 0
+# while i < n:
+#     print(stu_roll[i])
+#     i += 1
+#
+# print("Array After Insert")
+# stu_roll.insert(1, 106)
+# stu_roll.insert(3, 107)
+# n = len(stu_roll)
+# i = 0
+#
+# while i < n:
+#     print(stu_roll[i])
+#     i += 1
+#
+# stu_roll.remove(101)
+# n = len(stu_roll)
+# i = 0
+# while i < n:
+#     print(stu_roll[i])
+#     i += 1
+#
+
+s = "Hello World"
+print(s.upper())
+print(s.lower())
+print(s.swapcase())
+print(s.title())
+print(s.isupper())
+print(s.lower())
+print(s.isdigit())
+print(s.istitle())
+print(s.isalpha())
