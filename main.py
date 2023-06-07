@@ -88,13 +88,14 @@ import array
 #     i += 1
 #
 
-s = "Hello World"
-print(s.upper())
-print(s.lower())
-print(s.swapcase())
-print(s.title())
-print(s.isupper())
-print(s.lower())
-print(s.isdigit())
-print(s.istitle())
-print(s.isalpha())
+s = "\tHello World\t"
+
+print(s.lstrip())
+print(s.rstrip())
+print(s.strip())
+
+print(s.replace("World", "There"))
+split_str = s.split(' ')
+print(split_str)
+print(" ".join(split_str))
+
