@@ -1,101 +1,18 @@
-# #if else
-#
-# age = 18
-# if age >= 18:
-#     print("성인입니다.")
-# else:
-#     print("미성년자 입니다.")
-#
-#
-#
-# score = 85
-# if score >= 90:
-#     print("A 등급")
-# else:
-#     if score >= 80:
-#         print("B 등급")
-#     else:
-#         if score >= 70:
-#             print("C 등급")
-#         else:
-#             print("D 등급")
-#
-# a = int(input("Enter Number Greater then 2: "))
-# if a > 2:
-#     print("Correct!! you have Entered : ", a)
-# else:
-#     print("Wrong!! You have Entered : ", a)
-#
-# day = input("요일을 입력하세요 : ")
-# if day == 'Mon':
-#     print("오늘은 월요일")
-# elif day == 'Tue':
-#     print("오늘은 화요일")
-# elif day == 'Wed':
-#     print("오늘은 수요일")
-# else:
-#     print("휴일")
-#
-# i = 0
-# while i < 10:
-#     i += 1
-#     print("i : ", i)
-# else:
-#     print("else")
-# print("코드 종료")
-#
-#
-# #Infinity loop
-# while True:
-#     print("멋쟁이 사자")
-# print("코드 종료")
+print("인자가 없는 함수")
 
-#
-#
-# a = 5
-# if a < 6:
-#     pass # 해민 개발
-# else:
-#     print("6 보다 큼")
+def disp():
+    name = "멋쟁이사자"
+    print("Welcome to", name)
 
-# 배열 생성 후 접근
-import array
 
-# from array import *
-#
-# stu_roll = array('i', [101, 102, 103, 104, 105])
-# n = len(stu_roll)
-# i = 0
-# while i < n:
-#     print(stu_roll[i])
-#     i += 1
-#
-# print("Array After Insert")
-# stu_roll.insert(1, 106)
-# stu_roll.insert(3, 107)
-# n = len(stu_roll)
-# i = 0
-#
-# while i < n:
-#     print(stu_roll[i])
-#     i += 1
-#
-# stu_roll.remove(101)
-# n = len(stu_roll)
-# i = 0
-# while i < n:
-#     print(stu_roll[i])
-#     i += 1
-#
+print("함수 실행")
+disp()
+disp()
+disp()
 
-s = "\tHello World\t"
+def add(y):
+    x = 10.2334
+    print(x + y)
+    print(f"Formatted Output {x + y:5.2f}")
 
-print(s.lstrip())
-print(s.rstrip())
-print(s.strip())
-
-print(s.replace("World", "There"))
-split_str = s.split(' ')
-print(split_str)
-print(" ".join(split_str))
-
+add(20)
