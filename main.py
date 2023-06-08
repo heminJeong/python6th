@@ -1,16 +1,21 @@
-show = lambda x: print(x)
-show(5)
+def decor(fun):
+    def inner():
+        a = fun()
+        add = a + 5
+        return add
 
-add = lambda x, y: x + y
-print(add(6, 2))
-
-add_sub = lambda x, y: (x + y, x - y)
-a, s = add_sub(5, 2)
-
-print(a)
-print(s)
+    return inner
 
 
-add = lambda x, y=3: (x+y)
+def num():
+    return 10
 
-print(add(5))
+result_fun = decor(num)
+print(result_fun())
+
+
+@decor
+def num():
+    return 10
+
+print(num())
