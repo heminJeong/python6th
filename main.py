@@ -1,41 +1,28 @@
-b = (10)
-c = (10, )
+a = {10, 20, 30, '정해민', 'Jeong', 40, 10, 20}
 
+b = set()
+print(type(a))
 print(type(b))
-print(type(c))
 
-d = (10, 20, 30, 40)
-e = (10, 20, -50, 21.3, '멋쟁이사자')
-f = 10, 20, -60, 21.3, '멋쟁이사자'
+print(a)
 
-print(d, e, f, sep='\n')
+a.remove('정해민')
+a.discard('멋쟁이사자')
+a.discard(70)
 
-print(f[1])
-print(f[2])
-print(f[3])
-print(f[4])
+new_set = {10, 20, 50, 70, 80}
 
-print(f[:3])
-print(f[1:4])
-print(f[3:])
+intersection_a_new = a.intersection(new_set, a, b)
+print(intersection_a_new)
 
+union_a = a.union(new_set)
+print('union_a : ', union_a)
 
-h = (10, 20, -50, 20)
-print(min(h), max(h))
-print(h.count(20))
-print(h.index(20))
+difference_a = a.difference(new_set)
+print("difference_a : ", difference_a)
 
-a = (10, 20, -50)
-x, y, z = a
-print(x, y, z)
+print(b.issubset(a))
+print(a.issuperset(b))
 
-a = 1
-b = 2
-
-print("a : ", a)
-print("b : ", b)
-
-a, b = b, a
-
-print("a : ", a)
-print("b : ", b)
+sym_a = a.symmetric_difference(new_set)
+print('symmetric_difference : ', sym_a)
