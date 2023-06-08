@@ -1,67 +1,38 @@
-def pw(x, y):
-    z = x ** y
-    print(z)
+fruits = ['apple', 'banana', 'cherry', 'orange']
+vegetables = ['carrot', 'cucumber']
 
-pw(2, 5)
-pw(5, 2)
+grocery = fruits + vegetables
+print(grocery)
 
-def show(name: str, age: int):
-    print(f"Name: {name} Age: {age}")
+numbers = [10, 5, 8, 1, 7]
+numbers.sort()
 
-show(name='정해민', age=30)
+print(numbers)
 
-def add(x, y):
-    z = x + y
-    print("Addition : ", z)
+slice_numbers = numbers[1:4]
 
-add(5, 2)
+print(slice_numbers)
 
-def add(*num):
-    z = num[0] + num[1] + num[2]
-    print("Addition *: ", z)
+numbers_copy = numbers.copy()
+print(numbers_copy)
 
-add(5, 2, 4)
-
-def add(x, *num):
-    z = x + num[0] + num[1]
-    print("Addition x *: ", z)
-
-add(5, 2, 4)
-
-def add(**num):
-    z = num['a'] + num['b'] + num['c']
-    print('Addition : ', z)
-
-add(a = 5, b = 2, c = 4, d= 5)
+numbers_clone = numbers[:]
+print(numbers_clone)
 
 
-a = 50
 
-def show():
-    x = 10
-    print(x)
-    print(a)
+alias_number = numbers
+print(alias_number)
 
-show()
+alias_number.pop()
 
-print("Global Variable a : ", a)
+# 사용자 입력으로 리스트 만들기
 
-def show2():
-    global a
-    print("show2-A :", a)
-    a = 20
-    print("show2-A2 :", a)
+user_input_list = []
+num_elements = int(input("Enter Number of Element : "))
+for i in range(num_elements):
+    user_input_list.append(input("Enter Element : "))
 
-show2()
-print("A : ", a)
-
-
-i = 0
-def myfun():
-    print("My Function i : ", i)
-
-
-    print("My function", a)
-
-myfun()
-print("Global Variable a : ", a)
+print("User Input List : ")
+for elemnet in user_input_list:
+    print(elemnet)
