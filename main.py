@@ -1,7 +1,17 @@
-file_object = open('new_example.txt', 'w')
+print('파일 열기')
+file_object = open('example.txt', 'r')
 
-content = "This is a new file.\nPython is fun!"
 
-file_object.write(content)
+print("현재 파일 위치 확인")
+position = file_object.tell()
+print("Current Position : ", position)
 
+print("파일 포인터 위치 변경")
+file_object.seek(7)
+
+print("변경된 위치 확인")
+position = file_object.tell()
+print("New position : ", position)
+
+print("파일 닫기")
 file_object.close()
