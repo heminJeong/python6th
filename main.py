@@ -1,21 +1,24 @@
-def decor(fun):
-    def inner():
-        a = fun()
-        add = a + 5
-        return add
 
-    return inner
+class Mobile:
+    fp = 'yes'
 
+realme = Mobile()
+redme = Mobile()
+geek = Mobile()
 
-def num():
-    return 10
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
 
-result_fun = decor(num)
-print(result_fun())
+Mobile.fp = 'no'
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
 
-
-@decor
-def num():
-    return 10
-
-print(num())
+redme.fp = 'Not Working'
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
