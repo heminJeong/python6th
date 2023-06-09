@@ -33,4 +33,4 @@ print('7을 더하세요')
 parent.add_num(7)
 child.add_num(7)
 print(parent)
-print(child)ˆ
+print(child)
