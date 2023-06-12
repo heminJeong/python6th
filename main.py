@@ -1,20 +1,22 @@
-import os
+class Car:
+    # 클래스 속성
+    wheel = 4
 
-filename = 'example.txt'
+    def __init__(self, make, model, color):
+        self.make = make
+        self.model = model
+        self.color = color
 
-print("파일이 존재하는지 확인하기")
-if os.path.isfile(filename):
-    print(f"{filename}이 존재합니다.")
+    def drive(self):
+        return "The car is moving!"
 
-else:
-    print(f"{filename}이 없습니다.")
+    def stop(self):
+        return "The car has stopped."
 
+my_car = Car("Kia", "Morning", "Blue")
 
-file_object = open('list_example.txt', 'w')
+print(my_car.make)
 
-content_list = ["Python", "Java", "C++", "Javascript"]
-
-for item in content_list:
-    file_object.write(item + '\n')
-
-file_object.close()
+#메소드 호출
+print(my_car.drive())
+print(my_car.stop())
