@@ -1,33 +1,21 @@
-class ListNode:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
+class MyQueue:
 
-class Stack:
     def __init__(self):
-        self.head = None
-        self.size = 0
+        self.input = []
+        self.output = []
 
-    def is_empty(self):
-        return self.size == 0
+    def push(self, x: int) -> None:
+        self.input.append(x)
 
-    def push(self, value):
-        new_node = ListNode(value)
-        new_node.next = self.head
-        self.head = new_node
-        self.size += 1
+    def pop(self) -> int:
+        self.peek()
+        return self.output.pop()
 
-    def pop(self):
-        if self.is_empty():
-            raise IndexError("pop from an empty stack")
-        value = self.head.value
-        self.head = self.head.next
-        self.size -= 1
-        return value
+    def peek(self) -> int:
+        if not self.output:
+            while self.input:
+                self.output.append(self.input.pop())
+        return self.output[-1]
 
-stack = Stack()
-for x in range(1, 6):
-    stack.push(x)
-
-for _ in range(5):
-    print(stack.pop())
+    def empty(self) -> bool:
+        return self.input == [] and self.output == []
