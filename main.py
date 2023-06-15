@@ -1,13 +1,33 @@
-words = ['apple', 'bat', 'bar', 'atom', 'book']
-by_letters = {}
+class ListNode:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
 
-for word in words:
-    letter = word[0]
-    if letter not in by_letters:
-        by_letters[letter] = [word]
+class Stack:
+    def __init__(self):
+        self.head = None
+        self.size = 0
 
-    else:
-        by_letters[letter].append(word)
+    def is_empty(self):
+        return self.size == 0
 
-print(by_letters)
-print(by_letters['c'])
+    def push(self, value):
+        new_node = ListNode(value)
+        new_node.next = self.head
+        self.head = new_node
+        self.size += 1
+
+    def pop(self):
+        if self.is_empty():
+            raise IndexError("pop from an empty stack")
+        value = self.head.value
+        self.head = self.head.next
+        self.size -= 1
+        return value
+
+stack = Stack()
+for x in range(1, 6):
+    stack.push(x)
+
+for _ in range(5):
+    print(stack.pop())
