@@ -1,3 +1,4 @@
 .idea
 new_example.txt
 example.txt
+**/db.sqlite3

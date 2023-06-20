@@ -1,37 +1,59 @@
-from urllib.request import urlopen
-from html.parser import HTMLParser
+import sys
 
+def dijkstra(graph, start):
+    # 그래프의 정점 개수
+    vertices = len(graph)
 
+    # 출발점에서 각 정점까지의 최단 거리를 저장하는 배열
+    distances = [sys.maxsize] * vertices
 
-class ImageParser(HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.result = []
-    def handle_starttag(self, tag, attrs):
-        if tag != 'img':
-            return
-        if not hasattr(self, 'result'):
-            self.result = []
-        for name, value in attrs:
-            if name == 'src':
-                self.result.append(value)
+    # 방문한 정점을 표시하는 배열
+    visited = [False] * vertices
 
-def parse_image(data):
-    parser = ImageParser()
-    parser.feed(data)
-    data_set = set(x for x in parser.result)
-    return data_set
+    # 출발점의 거리는 0으로 설정
+    distances[start] = 0
 
-def main():
-    url = 'https://google.co.kr'
-    with urlopen(url) as f:
-        charset = f.headers.get_params('charset')[1][1]
-        print(charset)
-        data = f.read().decode(charset)
+    # 모든 정점을 방문할 때까지 반복
+    for _ in range(vertices):
+        # 방문하지 않은 정점 중에서 출발점에서 가장 가까운 정점을 선택
+        min_distance = sys.maxsize
+        min_index = -1
+        for v in range(vertices):
+            if not visited[v] and distances[v] < min_distance:
+                min_distance = distances[v]
+                min_index = v
 
-    data_set = parse_image(data)
-    print("\n>>> Fetch Images from", url)
-    print("\n".join(sorted(data_set)))
+        # 선택한 정점을 방문한 것으로 표시
+        visited[min_index] = True
 
-if __name__ == "__main__":
-    main()
+        # 선택한 정점과 연결된 정점들의 최단 거리를 업데이트
+        for v in range(vertices):
+            if (
+                not visited[v]
+                and graph[min_index][v] != 0
+                and distances[min_index] + graph[min_index][v] < distances[v]
+            ):
+                distances[v] = distances[min_index] + graph[min_index][v]
+
+    return distances
+
+# 그래프 예제
+graph = [
+    [0, 4, 0, 0, 0, 0, 0, 8, 0],
+    [4, 0, 8, 0, 0, 0, 0, 11, 0],
+    [0, 8, 0, 7, 0, 4, 0, 0, 2],
+    [0, 0, 7, 0, 9, 14, 0, 0, 0],
+    [0, 0, 0, 9, 0, 10, 0, 0, 0],
+    [0, 0, 4, 14, 10, 0, 2, 0, 0],
+    [0, 0, 0, 0, 0, 2, 0, 1, 6],
+    [8, 11, 0, 0, 0, 0, 1, 0, 7],
+    [0, 0, 2, 0, 0, 0, 6, 7, 0]
+]
+
+start_vertex = 0
+
+distances = dijkstra(graph, start_vertex)
+
+print("출발점으로부터의 최단 거리:")
+for v in range(len(distances)):
+    print(f"{v}: {distances[v]}")
