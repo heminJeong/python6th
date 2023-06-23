@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'books.apps.BooksConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -55,7 +56,11 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        "DIRS": [
+            'polls/templates/polls',
+            'books/templates/books',
+            'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +127,27 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version' : 1,
+    'disable_existing_loggers' : False,
+    'formatters' : {
+        'console' : {
+            'format' : '%(asctime)s %(levelname)s %(message)s',
+            'dataset' : '%d/^b/%y %H:%M:%S'
+        }
+    },
+    'handlers' : {
+        'console' : {
+            'class' : 'logging.StreamHandler',
+            'formatter' : 'console'
+        }
+    },
+    'loggers' : {
+        'django' : {
+            'level' : 'INFO',
+            'handlers' : ['console']
+        }
+    }
+
+}
